@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { AuthProvider } from './hooks/useAuth';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/auth/LoginPage';
@@ -31,6 +32,7 @@ function App() {
                     {/* Fallback */}
                     <Route path="*" element={<LandingPage />} />
                 </Routes>
+                <SpeedInsights />
             </BrowserRouter>
         </AuthProvider>
     );
